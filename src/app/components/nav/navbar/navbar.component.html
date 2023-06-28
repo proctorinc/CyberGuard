@@ -1,46 +1,151 @@
 <div
-  class="z-50 sticky shadow-xl top-0 flex justify-center items-center text-secondary-100 w-full h-14 bg-secondary-800 p-3"
+  class="z-50 sticky top-0 shadow-xl flex flex-col text-secondary-100 w-full bg-secondary-800"
 >
-  <button class="absolute left-3 flex items-center" routerLink="/">
-    <img class="w-10 h-10" src="/assets/logo.svg" alt="Logo" />
-    <h3 class="text-xl font-bold text-white">CyberGuard</h3>
-  </button>
-  <div class="hidden md:flex gap-1 text-sm">
+  <div class="flex justify-center items-center h-14 p-3">
+    <button class="absolute left-3 flex items-center" routerLink="/">
+      <img class="w-10 h-10" src="/assets/logo.svg" alt="Logo" />
+      <h3 class="text-xl font-bold text-white">CyberGuard</h3>
+    </button>
+    <div class="hidden md:flex gap-1 text-sm">
+      <button
+        routerLink="/solutions"
+        routerLinkActive="active"
+        #solutionsRoute="routerLinkActive"
+        [ngClass]="
+          solutionsRoute.isActive
+            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            : 'bg-secondary-700 text-secondary-100'
+        "
+        class="rounded-lg px-4 py-1 font-semibold"
+      >
+        Solutions
+      </button>
+      <button
+        routerLink="/plans"
+        routerLinkActive="active"
+        #plansRoute="routerLinkActive"
+        [ngClass]="
+          plansRoute.isActive
+            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            : 'bg-secondary-700 text-secondary-100'
+        "
+        class="rounded-lg px-4 py-1 font-semibold"
+      >
+        Plans
+      </button>
+      <button
+        routerLink="/about"
+        routerLinkActive="active"
+        #aboutRoute="routerLinkActive"
+        [ngClass]="
+          aboutRoute.isActive
+            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            : 'bg-secondary-700 text-secondary-100'
+        "
+        class="rounded-lg px-4 py-1 font-semibold"
+      >
+        About us
+      </button>
+    </div>
+    <div class="absolute right-3 flex gap-2 items-center">
+      <button
+        routerLink="/signin"
+        routerLinkActive="active"
+        #signinRoute="routerLinkActive"
+        [ngClass]="
+          signinRoute.isActive
+            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            : 'bg-secondary-700 text-secondary-100'
+        "
+        class="hidden md:flex px-4 py-1 font-semibold rounded-2xl"
+      >
+        Sign In
+      </button>
+      <button
+        routerLink="/book"
+        routerLinkActive="active"
+        #bookRoute="routerLinkActive"
+        [ngClass]="
+          bookRoute.isActive
+            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            : 'bg-primary-800 text-white'
+        "
+        class="hidden shadow-xl sm:flex px-4 py-1 text-white font-extrabold text-xl rounded-2xl"
+      >
+        Book Demo
+      </button>
+      <button
+        (click)="toggleDrawer()"
+        class="md:hidden px-4 py-1 bg-secondary-700 rounded-lg"
+      >
+        <img class="h-7 w-7" src="/assets/menu.svg" alt="Menu" />
+      </button>
+    </div>
+  </div>
+  <div
+    *ngIf="isDrawerOpen"
+    class="md:hidden flex flex-col items-center p-5 gap-3"
+  >
     <button
       routerLink="/solutions"
-      class="rounded-lg bg-secondary-700 px-4 py-1 font-semibold"
+      routerLinkActive="active"
+      #solutionsRoute="routerLinkActive"
+      [ngClass]="
+        solutionsRoute.isActive
+          ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+          : 'bg-secondary-700 text-secondary-100'
+      "
+      class="rounded-lg px-4 py-2 font-semibold w-full text-lg"
     >
       Solutions
     </button>
     <button
       routerLink="/plans"
-      routerLinkActive="bg-secondary-100"
-      class="rounded-lg bg-secondary-700 px-4 py-1 font-semibold"
+      routerLinkActive="active"
+      #plansRoute="routerLinkActive"
+      [ngClass]="
+        plansRoute.isActive
+          ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+          : 'bg-secondary-700 text-secondary-100'
+      "
+      class="rounded-lg px-4 py-2 font-semibold w-full text-lg"
     >
       Plans
     </button>
     <button
       routerLink="/about"
-      class="rounded-lg bg-secondary-700 px-4 py-1 font-semibold"
+      routerLinkActive="active"
+      #aboutRoute="routerLinkActive"
+      [ngClass]="
+        aboutRoute.isActive
+          ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+          : 'bg-secondary-700 text-secondary-100'
+      "
+      class="rounded-lg px-4 py-2 font-semibold w-full text-lg"
     >
       About us
     </button>
-  </div>
-  <div class="absolute right-3 flex gap-2 items-center">
     <button
       routerLink="/signin"
-      class="hidden md:flex px-4 py-1 font-semibold bg-secondary-700 rounded-2xl"
+      [ngClass]="
+        signinRoute.isActive
+          ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+          : 'bg-secondary-700 text-secondary-100'
+      "
+      class="rounded-lg px-4 py-2 font-semibold w-full text-lg"
     >
       Sign In
     </button>
     <button
       routerLink="/book"
-      class="hidden shadow-xl sm:flex px-4 py-1 bg-primary-800 text-white font-extrabold text-xl rounded-2xl"
+      [ngClass]="
+        bookRoute.isActive
+          ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+          : 'bg-primary-800 text-white'
+      "
+      class="sm:hidden rounded-3xl mt-3 shadow-xl px-4 py-2 font-semibold w-full text-lg"
     >
       Book Demo
-    </button>
-    <button class="md:hidden px-4 py-1 bg-secondary-700 rounded-lg">
-      <img class="h-7 w-7" src="/assets/menu.svg" alt="Menu" />
     </button>
   </div>
 </div>
