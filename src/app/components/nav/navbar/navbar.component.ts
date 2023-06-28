@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
-  isDrawerOpen = true;
+  isDrawerOpen = false;
 
   toggleDrawer = () => {
     this.isDrawerOpen = !this.isDrawerOpen;
