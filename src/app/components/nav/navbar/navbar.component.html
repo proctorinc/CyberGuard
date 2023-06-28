@@ -1,0 +1,46 @@
+<div
+  class="z-50 sticky shadow-xl top-0 flex justify-center items-center text-secondary-100 w-full h-14 bg-secondary-800 p-3"
+>
+  <button class="absolute left-3 flex items-center" routerLink="/">
+    <img class="w-10 h-10" src="/assets/logo.svg" alt="Logo" />
+    <h3 class="text-xl font-bold text-white">CyberGuard</h3>
+  </button>
+  <div class="hidden md:flex gap-1 text-sm">
+    <button
+      routerLink="/solutions"
+      class="rounded-lg bg-secondary-700 px-4 py-1 font-semibold"
+    >
+      Solutions
+    </button>
+    <button
+      routerLink="/plans"
+      routerLinkActive="bg-secondary-100"
+      class="rounded-lg bg-secondary-700 px-4 py-1 font-semibold"
+    >
+      Plans
+    </button>
+    <button
+      routerLink="/about"
+      class="rounded-lg bg-secondary-700 px-4 py-1 font-semibold"
+    >
+      About us
+    </button>
+  </div>
+  <div class="absolute right-3 flex gap-2 items-center">
+    <button
+      routerLink="/signin"
+      class="hidden md:flex px-4 py-1 font-semibold bg-secondary-700 rounded-2xl"
+    >
+      Sign In
+    </button>
+    <button
+      routerLink="/book"
+      class="hidden shadow-xl sm:flex px-4 py-1 bg-primary-800 text-white font-extrabold text-xl rounded-2xl"
+    >
+      Book Demo
+    </button>
+    <button class="md:hidden px-4 py-1 bg-secondary-700 rounded-lg">
+      <img class="h-7 w-7" src="/assets/menu.svg" alt="Menu" />
+    </button>
+  </div>
+</div>
