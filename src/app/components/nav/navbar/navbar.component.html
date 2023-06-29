@@ -6,14 +6,14 @@
       <img class="w-10 h-10" src="/assets/logo.svg" alt="Logo" />
       <h3 class="text-xl font-bold text-white">CyberGuard</h3>
     </button>
-    <div class="hidden md:flex gap-1 text-sm">
+    <div class="hidden md:flex gap-2 text-sm">
       <button
         routerLink="/solutions"
         routerLinkActive="active"
         #solutionsRoute="routerLinkActive"
         [ngClass]="
           solutionsRoute.isActive
-            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            ? 'bg-white text-secondary-700 shadow-xl'
             : 'bg-secondary-700 text-secondary-100'
         "
         class="rounded-lg px-4 py-1 font-semibold"
@@ -26,7 +26,7 @@
         #plansRoute="routerLinkActive"
         [ngClass]="
           plansRoute.isActive
-            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            ? 'bg-white text-secondary-700 shadow-xl'
             : 'bg-secondary-700 text-secondary-100'
         "
         class="rounded-lg px-4 py-1 font-semibold"
@@ -39,7 +39,7 @@
         #aboutRoute="routerLinkActive"
         [ngClass]="
           aboutRoute.isActive
-            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            ? 'bg-white text-secondary-700 shadow-xl'
             : 'bg-secondary-700 text-secondary-100'
         "
         class="rounded-lg px-4 py-1 font-semibold"
@@ -52,14 +52,17 @@
         routerLink="/signin"
         routerLinkActive="active"
         #signinRoute="routerLinkActive"
-        [ngClass]="
-          signinRoute.isActive
-            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
-            : 'bg-secondary-700 text-secondary-100'
-        "
-        class="hidden md:flex px-4 py-1 font-semibold rounded-2xl"
+        class="hidden md:flex px-4 py-1 font-semibold rounded-2xl bg-secondary-700 text-secondary-100"
       >
         Sign In
+      </button>
+      <button
+        routerLink="/signup"
+        routerLinkActive="active"
+        #signinRoute="routerLinkActive"
+        class="hidden md:flex px-4 py-1 font-semibold rounded-2xl bg-secondary-700 text-secondary-100"
+      >
+        Sign Up
       </button>
       <button
         routerLink="/book"
@@ -67,7 +70,7 @@
         #bookRoute="routerLinkActive"
         [ngClass]="
           bookRoute.isActive
-            ? 'bg-secondary-100 text-secondary-700 shadow-xl'
+            ? 'bg-white text-secondary-700 shadow-xl'
             : 'bg-primary-800 text-white'
         "
         class="hidden shadow-xl sm:flex px-4 py-1 text-white font-extrabold text-xl rounded-2xl"
