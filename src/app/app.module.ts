@@ -13,6 +13,8 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { NavbarComponent } from './components/nav/navbar/navbar.component';
 import { FooterComponent } from './components/nav/footer/footer.component';
 import { MenuIconComponent } from './components/icons/menu-icon.component';
+import { WaveTransitionComponent } from './components/ui/wave-transition/wave-transition.component';
+import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { MenuIconComponent } from './components/icons/menu-icon.component';
     NavbarComponent,
     FooterComponent,
     MenuIconComponent,
+    WaveTransitionComponent,
+    SignUpComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
