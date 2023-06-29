@@ -1,11 +1,109 @@
 <div
-  class="relative flex items-center justify-center flex-col gap-5 sm:gap-10 w-full bg-gradient-to-b from-secondary-100 to-white h-[70vh] text-center"
+  class="relative flex items-center flex-col gap-5 w-full text-center bg-secondary-100"
 >
-  <div class="flex flex-col px-3 gap-3">
-    <h1 class="text-7xl font-extrabold">Book</h1>
+  <div
+    class="flex flex-col gap-10 items-center bg-gradient-to-b from-white to-secondary-100 py-20 w-full"
+  >
+    <div class="flex flex-col items-center px-3 gap-3">
+      <h3 class="text-xl font-bold text-secondary-700">Book</h3>
+      <h1 class="text-3xl font-bold">
+        Let's get you in contact with our team!
+      </h1>
+      <p class="font-light max-w-md">
+        Schedule a personal walkthrough of CyberGuard to see how it can simplify
+        your security
+      </p>
+    </div>
+    <div class="flex gap-20 px-5 flex-wrap justify-center pb-20">
+      <form
+        class="flex flex-col items-center p-8 gap-5 bg-white shadow-2xl rounded-2xl text-sm text-left"
+      >
+        <div class="flex gap-5 w-full">
+          <div class="flex flex-col gap-3">
+            <p class="px-1">First Name:</p>
+            <input class="rounded-xl px-4 bg-gray-100 w-64 h-12" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="px-1">Last Name:</p>
+            <input class="rounded-xl px-4 bg-gray-100 w-64 h-12" />
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 w-full">
+          <p class="px-1">Company Email:</p>
+          <input class="rounded-xl px-4 bg-gray-100 w-full h-12" />
+        </div>
+        <div class="flex gap-5 w-full">
+          <div class="flex flex-col gap-3">
+            <p class="px-1">Company:</p>
+            <input class="rounded-xl px-4 bg-gray-100 w-64 h-12" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="px-1">Company Size:</p>
+            <select
+              class="rounded-xl px-4 bg-gray-100 w-64 h-12"
+              placeholder="Select Role..."
+            >
+              <option selected>Select one...</option>
+              <option value="lt-500">Less than 500</option>
+              <option value="500-to-1000">500-1,000</option>
+              <option value="1000-to-7500">1,000-7,500</option>
+              <option value="7500">7,500+</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 w-full">
+          <p class="px-1">Role:</p>
+          <select
+            class="rounded-xl px-4 bg-gray-100 w-full h-12"
+            placeholder="Select Role..."
+          >
+            <option selected>Select one...</option>
+            <option value="Student">Student</option>
+            <option value="Developer/Software Engineer">
+              Developer/Software Engineer
+            </option>
+            <option value="Appsec Engineer">Appsec Engineer</option>
+            <option value="Appsec Manager/Director">
+              Appsec Manager/Director
+            </option>
+            <option value="Security Architect">Security Architect</option>
+            <option value="Security Awareness">Security Awareness</option>
+            <option value="HR Learning & Development">
+              HR Learning & Development
+            </option>
+            <option value="Risk/Compliance">Risk/Compliance</option>
+            <option value="C-Suite">C-Suite</option>
+            <option value="Other">Other</option>
+            <option value="Development Manager">Development Manager</option>
+          </select>
+        </div>
+        <div class="flex gap-5 w-full">
+          <div class="flex flex-col gap-3">
+            <p class="px-1">Country:</p>
+            <input class="rounded-xl px-4 bg-gray-100 w-64 h-12" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="px-1">City:</p>
+            <input class="rounded-xl px-4 bg-gray-100 w-64 h-12" />
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 w-full">
+          <p class="px-1">Comments:</p>
+          <textarea
+            class="rounded-xl p-4 bg-gray-100 w-full h-40 overflow-scroll"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-primary-800 shadow-xl w-48 h-12 justify-center items-center rounded-full px-4 py-1 text-white font-extrabold text-xl"
+        >
+          Send
+        </button>
+      </form>
+    </div>
   </div>
   <img
-    class="absolute bottom-0 w-full -mb-[10vw] bg-transparent"
+    class="absolute bottom-0 w-full -mb-[10vw]"
     src="/assets/wave-transition-black.svg"
     alt="wave-transition"
   />
