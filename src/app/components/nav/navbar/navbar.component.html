@@ -77,9 +77,9 @@
       <button
         (click)="toggleDrawer()"
         [ngClass]="isDrawerOpen ? 'bg-secondary-100' : 'bg-secondary-700'"
-        class="md:hidden px-4 py-1 rounded-lg"
+        class="md:hidden px-3 py-1 rounded-lg"
       >
-        <img class="h-7 w-7" src="/assets/menu.svg" alt="Menu" />
+        <app-menu-icon [active]="isDrawerOpen"></app-menu-icon>
       </button>
     </div>
   </div>

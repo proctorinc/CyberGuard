@@ -12,6 +12,7 @@ import { PlansComponent } from './pages/plans/plans.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { NavbarComponent } from './components/nav/navbar/navbar.component';
 import { FooterComponent } from './components/nav/footer/footer.component';
+import { MenuIconComponent } from './components/icons/menu-icon.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterComponent } from './components/nav/footer/footer.component';
     SolutionsComponent,
     NavbarComponent,
     FooterComponent,
+    MenuIconComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
