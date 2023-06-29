@@ -1,20 +1,22 @@
-<div class="relative flex items-center flex-col gap-5 w-full text-center">
+<div
+  class="relative flex items-center flex-col gap-5 w-full text-center bg-secondary-100"
+>
   <div
-    class="flex flex-col gap-5 items-center bg-gradient-to-b from-secondary-100 to-white py-10"
+    class="flex flex-col gap-10 items-center bg-gradient-to-b from-white to-secondary-100 py-20 w-full"
   >
     <div class="flex flex-col items-center px-3 gap-3">
       <h3 class="text-xl font-bold text-secondary-700">Plans</h3>
       <h1 class="text-3xl font-bold">
         Choose the right plan that scales to your security needs
       </h1>
-      <p class="font-light text-secondary-700 max-w-md">
+      <p class="font-light max-w-md">
         CyberGuard offers a wide range of flexible plans for businesses of all
         sizes!
       </p>
     </div>
-    <div class="flex gap-20 pb-40 flex-wrap justify-center">
+    <div class="flex gap-20 px-5 flex-wrap justify-center">
       <div
-        class="flex flex-col items-center p-8 gap-5 w-80 bg-white shadow-2xl rounded-2xl text-sm"
+        class="flex flex-col items-center p-5 md:p-8 gap-5 w-80 bg-white shadow-2xl rounded-2xl text-sm"
       >
         <h3 class="font-bold text-3xl">Personal</h3>
         <div class="flex gap-3 items-center justify-left w-full text-left">
@@ -84,11 +86,11 @@
   </div>
   <img
     class="w-full -mb-[15vw] bg-transparent"
-    src="/assets/wave-transition-black.svg"
+    src="/assets/wave-transition-blue.svg"
     alt="wave-transition"
   />
   <div
-    class="bg-secondary-800 w-full text-white flex flex-col sm:flex-row gap-10 justify-center items-center text-center px-5 pb-10 pt-5 sm:pt-0"
+    class="bg-secondary-800 w-full text-white flex flex-col lg:flex-row gap-10 justify-center items-center text-center px-5 pb-10 pt-10"
   >
     <div class="flex z-10 flex-col gap-3 max-w-md">
       <h2 class="font-extrabold text-3xl">Ready to get started?</h2>
@@ -96,19 +98,134 @@
         What are you waiting for? Jump right into a 14-day free trial today!
       </p>
     </div>
-    <div class="flex z-10 gap-3 p-5 bg-secondary-700 rounded-full">
+    <div
+      class="flex justify-center items-center z-10 p-5 bg-secondary-700 rounded-full"
+    >
       <button
         routerLink="/signin"
-        class="px-4 py-1 bg-primary-800 text-white font-semibold text-xl rounded-2xl"
+        class="bg-primary-800 shadow-xl w-48 h-12 justify-center items-center rounded-full px-4 py-1 text-white font-extrabold text-xl"
       >
         Start Free Trial
       </button>
     </div>
   </div>
-  <div class="bg-white w-full h-screen"></div>
-  <img
-    class="absolute bottom-0 w-full -mb-[10vw] bg-transparent"
-    src="/assets/wave-transition-black.svg"
-    alt="wave-transition"
-  />
 </div>
+<div class="bg-white w-full flex flex-col gap-5 items-center text-center py-20">
+  <div class="flex flex-col items-center px-3 gap-3">
+    <h1 class="text-3xl font-bold">Need CyberGuard for your full team?</h1>
+    <p class="font-light max-w-md">
+      Choose the right plan to scale to your company’s needs
+    </p>
+    <button
+      routerLink="/book"
+      class="bg-primary-800 shadow-xl w-48 h-12 justify-center items-center rounded-full px-4 py-1 text-white font-extrabold text-xl mt-5"
+    >
+      Book Demo
+    </button>
+  </div>
+  <table class="table-fixed w-full max-w-5xl text-sm text-left mt-5 sm:mt-10">
+    <thead>
+      <tr class="w-full h-12 sm:text-lg text-sm">
+        <th scope="col" class="text-center sm:text-left px-6 py-3">
+          Plan Comparison
+        </th>
+        <th scope="col" class="px-6 py-3">Business</th>
+        <th scope="col" class="px-6 py-3">Enterprise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="rounded-lg w-full bg-gray-100 h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          Number of users
+        </td>
+        <td scope="col" class="px-6 py-3">1-100</td>
+        <td scope="col" class="px-6 py-3">100+</td>
+      </tr>
+      <tr class="w-full h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          Compliance Tools
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+      </tr>
+      <tr class="rounded-lg w-full bg-gray-100 h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          Access Control Management
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+      </tr>
+      <tr class="w-full h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          Security Breach Detection
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+      </tr>
+      <tr class="rounded-lg w-full bg-gray-100 h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          Internal Auditing
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+      </tr>
+      <tr class="w-full h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          External Auditing
+        </td>
+        <td scope="col" class="px-6 py-3"></td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+      </tr>
+      <tr class="rounded-lg w-full bg-gray-100 h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          Integrations Library
+        </td>
+        <td scope="col" class="px-6 py-3">Self help setup + support</td>
+        <td scope="col" class="px-6 py-3">Full custom setup + support</td>
+      </tr>
+      <tr class="w-full h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          SAML 2.0 SSO
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+      </tr>
+      <tr class="rounded-lg w-full bg-gray-100 h-12">
+        <td scope="col" class="text-center sm:text-left px-6 py-3">
+          Dedicated Customer Success Manager
+        </td>
+        <td scope="col" class="px-6 py-3"></td>
+        <td scope="col" class="px-6 py-3">
+          <img class="h-6 w-6" src="/assets/check-mark.svg" alt="check-mark" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<img
+  class="w-full -mb-[10vw] bg-white"
+  src="/assets/wave-transition-black.svg"
+  alt="wave-transition"
+/>
